@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+              
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Fresher</p>
+            <h1>Hi, I'm <span>T.VarshaReddy</span><br>From Hyderabad</h1>
+        </div>
+    </div>
+</div>
+<!-- -----------about---------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/ps.JPG">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>I am a Computer Science undergraduate at ICFAI University, Hyderabad, with a strong interest in full-stack development, cloud technologies, and data visualization.My background includes practical project work, a digital marketing internship, and multiple certifications that demonstrate both technical skills and curiosity for learning. I enjoy solving real-world problems, working in teams, and staying updated with new technologies.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>SQL</span><br>MySQL</li>
+                        <li><span>Python</span><br>Scrpting language</li>
+                        <li><span>Digital marketing</span><br>SEO Optimization</li>
+                        <li><span>HTML</span><br>Web Development</li>
+                        <li><span>Problem Solving</span><br>Analytical Skills</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                
+                        <li><span>2024 june-july</span><br>Internship at QiTech IT Services Pvt. Ltd., Hyderabad.</li>
+                       
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        
+                        <li><span>2022-2026</span><br>B.Tech from ICFAI Hyderabad.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- ----------contact------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fas fa-paper-plane"></i> varshareddytalakanthi@gmail.com</p>
+                <p><i class="fas fa-phone-square-alt"></i> +91-8247486590</p>
+                <div class="social-icons">
+                    
+                    <a href="http://linkedin.com/in/varshareddy-talakanthi-578024348"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <a href="images/Talakanthi _Varsha _Reddy.pdf.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            
+    <div class="copyright">
+        <p>Copyright © Talakanthi VarshaReddy.</p>
+    </div>
+</div>
+
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+
+    var sidemeu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemeu.style.right = "0";
+    }
+    function closemenu(){
+        sidemeu.style.right = "-200px";
+    }
+
+</script>
+
+</body>
+</html>
